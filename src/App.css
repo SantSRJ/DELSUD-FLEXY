@@ -1,0 +1,44 @@
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.right-section {
+  flex: 1.3;
+  overflow: hidden;
+}
+
+.right-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-section {
+    order: 1; /* Cambia el orden, ahora será primero en la columna */
+    margin: 0;
+  }
+
+  .right-section {
+    display: none; /* Oculta la sección derecha en pantallas pequeñas */
+  }
+}
